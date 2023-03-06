@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <title>Weather</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -24,23 +25,34 @@
 
     <div class="widget-wrap">
         <div class="widget">
+
             <div class="container-wrap">
                 <div class="search-wrap">
                     <div id="autocomplete-wrapper" class="search">
-                        <input id="city-input" type="text" placeholder="Search city">
-                        <ul id="city-list" class="autocomplete-list"></ul>
-                        <button id="submitBtn" type="submit" class="search-btn">Search</button>
+                        <input id="city" type="text" name="city" placeholder="Введите город" autocomplete="off">
+                        <ul id="cityList"></ul>
+                        <button id="btn" class="search-btn">Выбрать</button>
                     </div>
                     <div class="favorites">
-                        <button class="favorites-btn" href="javascript:void(0);">Add to Favorites</button>
+                        <button class="favorites-btn" href="javascript:void(0);">Избранное</button>
                     </div>
                 </div>
             </div>
+
+            <div class="weather-wrap">
+                <h2 class="weather-city"></h2>
+                <p class="weather-description"></p>
+                <p class="weather-temp"></p>
+            </div>
+
+            <div class="canvas-wrap">
+                <canvas id="chart"></canvas>
+            </div>
+
         </div>
     </div>
 
     <script src="/js/scripts.js"></script>
-
 </body>
 
 </html>

@@ -79,31 +79,24 @@ body {
     outline: none;
 }
 
-.widget-wrap .container-wrap .search-wrap .search .autocomplete-list {
+.widget-wrap .container-wrap .search-wrap .search #cityList {
     position: absolute;
-    left: 20px;
-    bottom: -54px;
+    top: 17px;
+    padding: 0;
     list-style: none;
-    padding: unset;
-    margin: unset;
-}
-
-.widget-wrap .container-wrap .search-wrap .search .autocomplete-list li {
-    border: 1px solid #ccc;
     background-color: #fff;
+    z-index: 999;
+    overflow-y: auto;
 }
 
-.widget-wrap .container-wrap .search-wrap .search .autocomplete-list li:hover {
-    background-color: #f2f2f2;
-}
-
-.widget-wrap .container-wrap .search-wrap .search .autocomplete-list button {
-    display: flex;
-    border: unset;
-    background: unset;
+.widget-wrap .container-wrap .search-wrap .search #cityList li {
     cursor: pointer;
+    border: 1px solid #ccc;
     padding: 5px 10px;
-    width: 100%;
+}
+
+.widget-wrap .container-wrap .search-wrap .search #cityList li:hover {
+    background-color: #f2f2f2;
 }
 
 .widget-wrap .container-wrap .search-wrap .search .search-btn {
@@ -144,4 +137,40 @@ body {
     .widget-wrap .container-wrap .search-wrap .favorites .favorites-btn {
         font-size: 10px;
     }
+}
+
+.widget-wrap .widget .weather-wrap {
+    margin: 50px auto;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.widget-wrap .widget .weather-city {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.widget-wrap .widget .weather-description {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.widget-wrap .widget .weather-temp {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.widget-wrap .widget .canvas-wrap {
+    margin: 0 5px;
+}
+
+.widget-wrap .widget .canvas-wrap #chart {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 600px;
+    margin: 0 auto;
 }
