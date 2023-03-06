@@ -8,7 +8,7 @@ let chart = null;
 input.addEventListener('input', function () {
     const inputValue = input.value;
     if (inputValue.length > 0) {
-        const url = `http://api.openweathermap.org/geo/1.0/direct?q=${inputValue}&limit=20&appid=8144ea5ad0a23d10dc61228957515eee`;
+        const url = `https://api.openweathermap.org/geo/1.0/direct?q=${inputValue}&limit=20&appid=8144ea5ad0a23d10dc61228957515eee`;
         fetch(url)
             .then(response => response.json())
             .then(data => {
